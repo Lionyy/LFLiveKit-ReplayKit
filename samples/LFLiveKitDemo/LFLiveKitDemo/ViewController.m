@@ -33,6 +33,7 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
 @property (nonatomic, strong) LFLiveSession *session;
 @property (nonatomic, strong) UIView *testView;
 @property (nonatomic, strong) RPBroadcastController *broadcastController;
+@property (nonatomic, strong) UIView *pickerView;
 @end
 
 @implementation ViewController
@@ -96,6 +97,18 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
         button;
     });
     
+    _pickerView = ({
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(500, 300, 70, 70)];
+        view;
+    });
+    [self.view addSubview:_pickerView];
+    
+    if (@available(iOS 12.0, *)) {
+        RPSystemBroadcastPickerView *broadcastPicker = [[RPSystemBroadcastPickerView alloc] initWithFrame:_pickerView.bounds];
+        broadcastPicker.preferredExtension = @"com.rl.mobile.Recoder";
+        [_pickerView addSubview:broadcastPicker];
+    }
+
     [self.view addSubview:perpareButton];
     [self.view addSubview:statrButton1];
     [self.view addSubview:statrButton2];
@@ -158,8 +171,8 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
 
 - (void)perpare {
     LFLiveStreamInfo *stream = [LFLiveStreamInfo new];
-    // /直播推流地址
-    stream.url = @"rtmp://send3a.douyu.com/live/3523327rRE27GZhP?wsSecret=0498fe929f8783d5f42fb660c23de61a&wsTime=5c08e4bf&wsSeek=off&wm=0&tw=0";
+    // 直播推流地址
+    stream.url = @"rtmp://192.168.45.174:1935/mobile/123";
     
     [self.session startLive:stream];
     

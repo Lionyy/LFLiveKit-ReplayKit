@@ -76,8 +76,8 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
         audioConfiguration.numberOfChannels = 1;
         LFLiveVideoConfiguration *videoConfiguration;
        
-        videoConfiguration = [LFLiveVideoConfiguration defaultConfigurationForQuality:LFLiveVideoQuality_High3];
-        videoConfiguration.videoSize = UIScreen.mainScreen.bounds.size;
+        videoConfiguration = [LFLiveVideoConfiguration defaultConfigurationForQuality:LFLiveVideoQuality_High4];
+        videoConfiguration.videoSize = CGSizeMake(UIScreen.mainScreen.bounds.size.width * 2, UIScreen.mainScreen.bounds.size.height * 2);
         
         _session = [[LFLiveSession alloc] initWithAudioConfiguration:audioConfiguration videoConfiguration:videoConfiguration captureType:_mic? LFLiveInputMaskAll:LFLiveInputMaskVideo];
         

@@ -126,6 +126,17 @@
         configuration.videoSize = CGSizeMake(720, 1280);
     }
         break;
+    case LFLiveVideoQuality_High4: {
+        configuration.sessionPreset = LFCaptureSessionPreset1080x1920;
+        configuration.videoFrameRate = 24;
+        configuration.videoMaxFrameRate = 24;
+        configuration.videoMinFrameRate = 15;
+        configuration.videoBitRate = 1400 * 1000;
+        configuration.videoMaxBitRate = 2160 * 1000;
+        configuration.videoMinBitRate = 500 * 1000;
+        configuration.videoSize = CGSizeMake(1080, 1920);
+    }
+        break;
     default:
         break;
     }
@@ -144,8 +155,12 @@
 
 #pragma mark -- Setter Getter
 - (NSString *)avSessionPreset {
+    return [self avSessionPresetWithLFSessionPreset:self.sessionPreset];
+}
+
+- (NSString *)avSessionPresetWithLFSessionPreset:(LFLiveVideoSessionPreset)sessionPreset {
     NSString *avSessionPreset = nil;
-    switch (self.sessionPreset) {
+    switch (sessionPreset) {
     case LFCaptureSessionPreset360x640:{
         avSessionPreset = AVCaptureSessionPreset640x480;
     }
@@ -156,6 +171,10 @@
         break;
     case LFCaptureSessionPreset720x1280:{
         avSessionPreset = AVCaptureSessionPreset1280x720;
+    }
+        break;
+    case LFCaptureSessionPreset1080x1920:{
+        avSessionPreset = AVCaptureSessionPreset1920x1080;
     }
         break;
     default: {
@@ -213,15 +232,21 @@
         }
     }
     AVCaptureDeviceInput *videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:inputCamera error:nil];
-    
     if ([session canAddInput:videoInput]){
         [session addInput:videoInput];
     }
-    
     if (![session canSetSessionPreset:self.avSessionPreset]) {
-        if (sessionPreset == LFCaptureSessionPreset720x1280) {
+        if (sessionPreset == LFCaptureSessionPreset1080x1920) {
+            sessionPreset = LFCaptureSessionPreset720x1280;
+            if (![session canSetSessionPreset:[self avSessionPresetWithLFSessionPreset:sessionPreset]]) {
+                sessionPreset = LFCaptureSessionPreset540x960;
+                if (![session canSetSessionPreset:[self avSessionPresetWithLFSessionPreset:sessionPreset]]) {
+                    sessionPreset = LFCaptureSessionPreset360x640;
+                }
+            }
+        } else if (sessionPreset == LFCaptureSessionPreset720x1280) {
             sessionPreset = LFCaptureSessionPreset540x960;
-            if (![session canSetSessionPreset:self.avSessionPreset]) {
+            if (![session canSetSessionPreset:[self avSessionPresetWithLFSessionPreset:sessionPreset]]) {
                 sessionPreset = LFCaptureSessionPreset360x640;
             }
         } else if (sessionPreset == LFCaptureSessionPreset540x960) {
@@ -246,7 +271,10 @@
             videoSize = CGSizeMake(720, 1280);
         }
             break;
-            
+        case LFCaptureSessionPreset1080x1920:{
+            videoSize = CGSizeMake(1080, 1920);
+        }
+            break;
         default:{
             videoSize = CGSizeMake(360, 640);
         }

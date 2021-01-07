@@ -47,6 +47,12 @@ typedef NS_ENUM (NSUInteger, LFLiveVideoQuality){
     LFLiveVideoQuality_Default = LFLiveVideoQuality_Low2
 };
 
+/// 视频编码格式H264或者H265
+typedef NS_ENUM(NSInteger, LFVideoEncoderType) {
+    LFVideoH264Encoder = 264,
+    LFVideoH265Encoder = 265,
+};
+
 @interface LFLiveVideoConfiguration : NSObject<NSCoding, NSCopying>
 
 /// 默认视频配置
@@ -102,5 +108,8 @@ typedef NS_ENUM (NSUInteger, LFLiveVideoQuality){
 
 ///< 是否是横屏
 @property (nonatomic, assign, readonly) BOOL landscape;
+
+/// 视频编码格式
+@property (nonatomic, assign) LFVideoEncoderType encoderType;
 
 @end

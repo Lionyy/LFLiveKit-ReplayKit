@@ -119,6 +119,9 @@
 
 - (void)pushVideoBuffer:(CMSampleBufferRef)sampleBuffer {
     CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+    
+//    NSLog(@"pixelBuffer size %@", NSStringFromCGSize(CVImageBufferGetDisplaySize(pixelBuffer)));
+    
     [self pushVideo:pixelBuffer];
 }
 

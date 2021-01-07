@@ -77,7 +77,8 @@ inline static NSString *formatedSpeed(float bytes, float elapsed_milli) {
         LFLiveVideoConfiguration *videoConfiguration;
        
         videoConfiguration = [LFLiveVideoConfiguration defaultConfigurationForQuality:LFLiveVideoQuality_High4];
-        videoConfiguration.videoSize = CGSizeMake(UIScreen.mainScreen.bounds.size.width * 2, UIScreen.mainScreen.bounds.size.height * 2);
+        videoConfiguration.videoSize = CGSizeMake((NSInteger)(UIScreen.mainScreen.bounds.size.width/UIScreen.mainScreen.bounds.size.height * 1920), 1920);
+        videoConfiguration.encoderType = LFVideoH265Encoder;
         
         _session = [[LFLiveSession alloc] initWithAudioConfiguration:audioConfiguration videoConfiguration:videoConfiguration captureType:_mic? LFLiveInputMaskAll:LFLiveInputMaskVideo];
         

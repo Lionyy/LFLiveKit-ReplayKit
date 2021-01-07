@@ -21,7 +21,7 @@ static const NSInteger RetryTimesMargin = 3;
 #define RTMP_RECEIVE_TIMEOUT    2
 #define DATA_ITEMS_MAX_COUNT 100
 #define RTMP_DATA_RESERVE_SIZE 400
-#define RTMP_HEAD_SIZE (sizeof(RTMPPacket) + RTMP_MAX_HEADER_SIZE)
+#define RTMP_HEAD_SIZE (sizeof(PILI_RTMPPacket) + RTMP_MAX_HEADER_SIZE)
 
 #define SAVC(x)    static const AVal av_ ## x = AVC(#x)
 
@@ -352,6 +352,15 @@ Failed:
 }
 
 - (void)sendVideoHeader:(LFVideoFrame *)videoFrame {
+ 
+    if (videoFrame.vps) {
+        [self sendVideoHEVCHeader:videoFrame];
+    }else {
+        [self sendVideoH264Header:videoFrame];
+    }
+}
+
+- (void)sendVideoH264Header:(LFVideoFrame *)videoFrame {
 
     unsigned char *body = NULL;
     NSInteger iIndex = 0;
@@ -395,6 +404,98 @@ Failed:
     free(body);
 }
 
+- (void)sendVideoHEVCHeader:(LFVideoFrame *)videoFrame {
+
+    unsigned char *body = NULL;
+    NSInteger iIndex = 0;
+    NSInteger rtmpLength = sizeof(PILI_RTMPPacket) + RTMP_MAX_HEADER_SIZE + 1024;
+    const char *vps = videoFrame.vps.bytes;
+    const char *sps = videoFrame.sps.bytes;
+    const char *pps = videoFrame.pps.bytes;
+    NSInteger vps_len = videoFrame.vps.length;
+    NSInteger sps_len = videoFrame.sps.length;
+    NSInteger pps_len = videoFrame.pps.length;
+
+    body = (unsigned char *)malloc(rtmpLength);
+    memset(body, 0, rtmpLength);
+
+    body[iIndex++] = 0x1C;
+    body[iIndex++] = 0x00;
+    body[iIndex++] = 0x00;
+    body[iIndex++] = 0x00;
+    body[iIndex++] = 0x00;
+    body[iIndex++] = 0x00;
+ 
+    //general_profile_idc 8bit
+    body[iIndex++] = sps[1];
+    //general_profile_compatibility_flags 32 bit
+    body[iIndex++] = sps[2];
+    body[iIndex++] = sps[3];
+    body[iIndex++] = sps[4];
+    body[iIndex++] = sps[5];
+ 
+    // 48 bit NUll nothing deal in rtmp
+    body[iIndex++] = sps[6];
+    body[iIndex++] = sps[7];
+    body[iIndex++] = sps[8];
+    body[iIndex++] = sps[9];
+    body[iIndex++] = sps[10];
+    body[iIndex++] = sps[11];
+ 
+    //general_level_idc
+    body[iIndex++] = sps[12];
+ 
+    // 48 bit NUll nothing deal in rtmp
+    body[iIndex++] = 0x00;
+    body[iIndex++] = 0x00;
+    body[iIndex++] = 0x00;
+    body[iIndex++] = 0x00;
+    body[iIndex++] = 0x00;
+    body[iIndex++] = 0x00;
+ 
+    //bit(16) avgFrameRate;
+    body[iIndex++] = 0x00;
+    body[iIndex++] = 0x00;
+ 
+    /* bit(2) constantFrameRate; */
+    /* bit(3) numTemporalLayers; */
+    /* bit(1) temporalIdNested; */
+    body[iIndex++] = 0x00;
+ 
+    /* unsigned int(8) numOfArrays; 03 */
+    body[iIndex++] = 0x03;
+
+    /*vps*/
+    body[iIndex++] = 0x20;  //vps 32
+    body[iIndex++] = (1 >> 8) & 0xff;
+    body[iIndex++] = 1 & 0xff;
+    body[iIndex++] = (vps_len >> 8) & 0xff;
+    body[iIndex++] = vps_len & 0xff;
+    memcpy(&body[iIndex], vps, vps_len);
+    iIndex += vps_len;
+    
+    /*sps*/
+    body[iIndex++] = 0x21; //sps 33
+    body[iIndex++] = (1 >> 8) & 0xff;
+    body[iIndex++] = 1 & 0xff;
+    body[iIndex++] = (sps_len >> 8) & 0xff;
+    body[iIndex++] = sps_len & 0xff;
+    memcpy(&body[iIndex], sps, sps_len);
+    iIndex += sps_len;
+
+    /*pps*/
+    body[iIndex++] = 0x22; //pps 34
+    body[iIndex++] = (1 >> 8) & 0xff;
+    body[iIndex++] = 1 & 0xff;
+    body[iIndex++] = (pps_len >> 8) & 0xff;
+    body[iIndex++] = (pps_len) & 0xff;
+    memcpy(&body[iIndex], pps, pps_len);
+    iIndex += pps_len;
+
+    [self sendPacket:RTMP_PACKET_TYPE_VIDEO data:body size:iIndex nTimestamp:0];
+    free(body);
+}
+
 - (void)sendVideo:(LFVideoFrame *)frame {
 
     NSInteger i = 0;
@@ -402,12 +503,20 @@ Failed:
     unsigned char *body = (unsigned char *)malloc(rtmpLength);
     memset(body, 0, rtmpLength);
 
-    if (frame.isKeyFrame) {
-        body[i++] = 0x17;        // 1:Iframe  7:AVC
+    if (frame.vps) {
+        if (frame.isKeyFrame) {
+            body[i++] = 0x1C;        // 1:Iframe  12:HEVC
+        }else {
+            body[i++] = 0x2C;        // 1:Iframe  12:HEVC
+        }
     } else {
-        body[i++] = 0x27;        // 2:Pframe  7:AVC
+        if (frame.isKeyFrame) {
+            body[i++] = 0x17;        // 2:Pframe  7:AVC
+        }else {
+            body[i++] = 0x27;        // 2:Pframe  7:AVC
+        }
     }
-    body[i++] = 0x01;    // AVC NALU
+    body[i++] = 0x01;    // NALU
     body[i++] = 0x00;
     body[i++] = 0x00;
     body[i++] = 0x00;

@@ -11,7 +11,7 @@
 		0270858C9C9E4A45359D268919E2D7C5 /* NSMutableArray+LFAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 1167705D059D85EF6B17C6BE2133A630 /* NSMutableArray+LFAdd.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		02F66BC5F53496C51168004346E04F2C /* LFAVEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = CC9596A3038CB1BB159C6CB84970DB3A /* LFAVEncoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		087972FF2EA2018433678611E25A716A /* rtmp.c in Sources */ = {isa = PBXBuildFile; fileRef = C9E26CB803A45D1A83B99E82A2E84E97 /* rtmp.c */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0BF940E6D1ABF1168D0C50113C414E5C /* LFStreamRtmpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 99131F2875F909F2DE20712B2362B6EE /* LFStreamRtmpSocket.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0BF940E6D1ABF1168D0C50113C414E5C /* LFStreamRTMPSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 99131F2875F909F2DE20712B2362B6EE /* LFStreamRTMPSocket.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0C2A7A068244505F8CE6249E670258C1 /* LFAudioFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7556BAB7E04EE09D82F64FBF28FE8 /* LFAudioFrame.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		0CF1F4727FCE40B91BDF8218B87BC01A /* LFHardwareAudioEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F08D4E2EB736A11C9E233C5F68883AC /* LFHardwareAudioEncoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		0D35B05335AEB25C8D706F148E6E5FAE /* parseurl.c in Sources */ = {isa = PBXBuildFile; fileRef = AC2981E08CFC64BB415D29C51837F897 /* parseurl.c */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -108,7 +108,7 @@
 		D0F590056880E75D61194741FCE29A81 /* LFLiveKit-ReplayKit-iOS8.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6196F5957972F875CEC17467D2C3A821 /* LFLiveKit-ReplayKit-iOS8.0-dummy.m */; };
 		D406842F89FF64B40530CDBE14A07C1F /* LFAudioFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 8320C66C65CC682B69E9CE1966055C8B /* LFAudioFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D612F7A3217E5193B753BCFBD75D5943 /* LFLiveSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 8591454713C4721F49F19BC5DA8D4B52 /* LFLiveSession.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D6D9F751E44B9F7012DEAC25425E81F5 /* LFStreamRtmpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 99131F2875F909F2DE20712B2362B6EE /* LFStreamRtmpSocket.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D6D9F751E44B9F7012DEAC25425E81F5 /* LFStreamRTMPSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 99131F2875F909F2DE20712B2362B6EE /* LFStreamRTMPSocket.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D7F77D0CE982C907FCA16A9717F36119 /* LFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A93B973C3928A968190BA655A52434 /* LFFrame.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D9AC9CA26F16509C8BBBB255164E3389 /* LFHardwareVideoEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 7289D43E4E4032573994121760A5ABB1 /* LFHardwareVideoEncoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DA2E3B55512350D0A8908BF95C000CF3 /* LFLiveKit-ReplayKit-iOS11.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95EF230D7DBA83FDE3AA5523F4AA4310 /* LFLiveKit-ReplayKit-iOS11.0-dummy.m */; };
@@ -144,12 +144,12 @@
 
 /* Begin PBXFileReference section */
 		010D37B68692AAD4FDAAC2F6B9F0D5DC /* NSMutableArray+LFAdd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+LFAdd.m"; sourceTree = "<group>"; };
-		03C34D35C029FAD961085AF1231B2C8D /* error.c */ = {isa = PBXFileReference; includeInIndex = 1; path = error.c; sourceTree = "<group>"; };
+		03C34D35C029FAD961085AF1231B2C8D /* error.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = error.c; sourceTree = "<group>"; };
 		08AD64E04A8C0E6C857616BAA210D8BD /* LFStreamRTMPSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFStreamRTMPSocket.h; sourceTree = "<group>"; };
 		0922405F87B42084E9940EB194B763D4 /* LFLiveKit-ReplayKit-iOS11.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LFLiveKit-ReplayKit-iOS11.0-prefix.pch"; sourceTree = "<group>"; };
 		0A37E110E874CB1F2038EFFAC7DB1CD3 /* LFLiveDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFLiveDebug.h; sourceTree = "<group>"; };
 		0AF3E80189D658098C32030EE5801E6A /* LFFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFFrame.h; sourceTree = "<group>"; };
-		0DE4B345A8792BFD51EA3D6CDBA3203D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		0DE4B345A8792BFD51EA3D6CDBA3203D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		10275EB5D382EC86D78B303A5445A2D5 /* rtmp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = rtmp.h; sourceTree = "<group>"; };
 		1167705D059D85EF6B17C6BE2133A630 /* NSMutableArray+LFAdd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+LFAdd.h"; sourceTree = "<group>"; };
 		14E401535AA2955054ED15A50E3667E7 /* LFStreamSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFStreamSocket.h; sourceTree = "<group>"; };
@@ -157,69 +157,69 @@
 		1ADDC5CAF68F2FB3BA2478AD8C4A595B /* LFMP4Atom.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LFMP4Atom.m; sourceTree = "<group>"; };
 		1C111E8524FD5C165DDB47B99C0A0D32 /* Pods-LFLiveKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LFLiveKitDemo.release.xcconfig"; sourceTree = "<group>"; };
 		22677F3BA114DFA3596A3892C27364E2 /* LFH264VideoEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFH264VideoEncoder.h; sourceTree = "<group>"; };
-		28C20A3C10A7DE14B1C557C71984F797 /* LFH264VideoEncoder.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = LFH264VideoEncoder.mm; sourceTree = "<group>"; };
+		28C20A3C10A7DE14B1C557C71984F797 /* LFH264VideoEncoder.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; path = LFH264VideoEncoder.mm; sourceTree = "<group>"; };
 		2977EA9514565B8366E105EF45ED44D7 /* LFVideoFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LFVideoFrame.m; sourceTree = "<group>"; };
 		2B10A04C73F8969E2201258414B669BA /* Pods-Recoder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Recoder.release.xcconfig"; sourceTree = "<group>"; };
 		2EF9F218AB58A428504968E4284F0629 /* handshake.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = handshake.h; sourceTree = "<group>"; };
 		2F08D4E2EB736A11C9E233C5F68883AC /* LFHardwareAudioEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFHardwareAudioEncoder.h; sourceTree = "<group>"; };
 		334ECBEE34A9844ED1FBFDFF4A67E754 /* LFVideoEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LFVideoEncoder.m; sourceTree = "<group>"; };
-		3AB379FBF885515253B668853D4B1B05 /* LFNALUnit.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = LFNALUnit.cpp; sourceTree = "<group>"; };
+		3AB379FBF885515253B668853D4B1B05 /* LFNALUnit.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; path = LFNALUnit.cpp; sourceTree = "<group>"; };
 		43F15AA88F32C7B45A628F1177B59811 /* LFLiveStreamInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFLiveStreamInfo.h; sourceTree = "<group>"; };
 		4BB3C6DD5836BD733EBE0D7408CE8CD0 /* Pods-Recoder-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Recoder-acknowledgements.plist"; sourceTree = "<group>"; };
-		51003AA396A4385B9319C5BE38A292B0 /* hashswf.c */ = {isa = PBXFileReference; includeInIndex = 1; path = hashswf.c; sourceTree = "<group>"; };
+		51003AA396A4385B9319C5BE38A292B0 /* hashswf.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = hashswf.c; sourceTree = "<group>"; };
 		55B64F4FCC278CE1B4F3747415D0D559 /* LFLiveKit-ReplayKit-iOS8.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "LFLiveKit-ReplayKit-iOS8.0.xcconfig"; path = "../LFLiveKit-ReplayKit-iOS8.0/LFLiveKit-ReplayKit-iOS8.0.xcconfig"; sourceTree = "<group>"; };
 		5D1BE7C861DF7602F0D15438C9915C08 /* LFLiveAudioConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LFLiveAudioConfiguration.m; sourceTree = "<group>"; };
 		6196F5957972F875CEC17467D2C3A821 /* LFLiveKit-ReplayKit-iOS8.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "LFLiveKit-ReplayKit-iOS8.0-dummy.m"; path = "../LFLiveKit-ReplayKit-iOS8.0/LFLiveKit-ReplayKit-iOS8.0-dummy.m"; sourceTree = "<group>"; };
-		663D0BB55FCC2A17CF76BE21D8EFD51E /* libLFLiveKit-ReplayKit-iOS11.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libLFLiveKit-ReplayKit-iOS11.0.a"; path = "libLFLiveKit-ReplayKit-iOS11.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		663D0BB55FCC2A17CF76BE21D8EFD51E /* libLFLiveKit-ReplayKit-iOS11.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLFLiveKit-ReplayKit-iOS11.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67AFBDE648D26A728CC0651B589B3E7F /* bytes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = bytes.h; sourceTree = "<group>"; };
-		6EE544C77C133453BC1BE746AD0CB8FB /* log.c */ = {isa = PBXFileReference; includeInIndex = 1; path = log.c; sourceTree = "<group>"; };
+		6EE544C77C133453BC1BE746AD0CB8FB /* log.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = log.c; sourceTree = "<group>"; };
 		6F0ACB00255A0523D118D0CF200CAC7B /* http.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = http.h; sourceTree = "<group>"; };
 		6FAB052BDECC2E7E6EF9152D7EE4F653 /* dh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = dh.h; sourceTree = "<group>"; };
 		7289D43E4E4032573994121760A5ABB1 /* LFHardwareVideoEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFHardwareVideoEncoder.h; sourceTree = "<group>"; };
 		73C396E3005525405A2AFA911CC45D1D /* Pods-LFLiveKitDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LFLiveKitDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		772E0BCE7357478377E29FD9DA59BC9A /* LFVideoFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFVideoFrame.h; sourceTree = "<group>"; };
-		7DB2150B1C2CD20BE711416DDA1647B5 /* LFAVEncoder.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = LFAVEncoder.mm; sourceTree = "<group>"; };
-		7DD04BA3612D71C3EF223E3318888F0F /* LFLiveKit-ReplayKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = "LFLiveKit-ReplayKit.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7DB2150B1C2CD20BE711416DDA1647B5 /* LFAVEncoder.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; path = LFAVEncoder.mm; sourceTree = "<group>"; };
+		7DD04BA3612D71C3EF223E3318888F0F /* LFLiveKit-ReplayKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = "LFLiveKit-ReplayKit.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8320C66C65CC682B69E9CE1966055C8B /* LFAudioFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFAudioFrame.h; sourceTree = "<group>"; };
 		84A062A9764663CC7DB96855B699DBA9 /* LFLiveDebug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LFLiveDebug.m; sourceTree = "<group>"; };
-		84C889282BC8F064A9EA786280A4FF6E /* amf.c */ = {isa = PBXFileReference; includeInIndex = 1; path = amf.c; sourceTree = "<group>"; };
+		84C889282BC8F064A9EA786280A4FF6E /* amf.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = amf.c; sourceTree = "<group>"; };
 		852190F576A475BC54BCAD312F2F2FE5 /* log.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
 		8591454713C4721F49F19BC5DA8D4B52 /* LFLiveSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LFLiveSession.m; path = "LFLiveKit-ReplayKit/LFLiveSession.m"; sourceTree = "<group>"; };
 		8E7477867A8D3A0DF81E2D22E20B09C4 /* LFHardwareAudioEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LFHardwareAudioEncoder.m; sourceTree = "<group>"; };
 		910D973D8B125CE924C7BB9AC54C2C57 /* LFStreamingBuffer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LFStreamingBuffer.m; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95EF230D7DBA83FDE3AA5523F4AA4310 /* LFLiveKit-ReplayKit-iOS11.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LFLiveKit-ReplayKit-iOS11.0-dummy.m"; sourceTree = "<group>"; };
 		98F9A6A3270F8F98037097818C6CB835 /* Pods-LFLiveKitDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LFLiveKitDemo-dummy.m"; sourceTree = "<group>"; };
-		99131F2875F909F2DE20712B2362B6EE /* LFStreamRtmpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LFStreamRtmpSocket.m; sourceTree = "<group>"; };
+		99131F2875F909F2DE20712B2362B6EE /* LFStreamRTMPSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LFStreamRTMPSocket.m; sourceTree = "<group>"; };
 		9E158662CB0859C8314A53E199EF36AA /* Pods-LFLiveKitDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LFLiveKitDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		A5F7556BAB7E04EE09D82F64FBF28FE8 /* LFAudioFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LFAudioFrame.m; sourceTree = "<group>"; };
 		AB4F5BEBAE63CAA7BA60209AFFE04ABD /* error.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
 		AB5067CF24E662816D87883375AF31EB /* LFLiveKit-ReplayKit-iOS8.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LFLiveKit-ReplayKit-iOS8.0-prefix.pch"; path = "../LFLiveKit-ReplayKit-iOS8.0/LFLiveKit-ReplayKit-iOS8.0-prefix.pch"; sourceTree = "<group>"; };
 		ABD5E9CDD56F93E9B502D34B612CE397 /* Pods-Recoder-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Recoder-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AC2981E08CFC64BB415D29C51837F897 /* parseurl.c */ = {isa = PBXFileReference; includeInIndex = 1; path = parseurl.c; sourceTree = "<group>"; };
+		AC2981E08CFC64BB415D29C51837F897 /* parseurl.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = parseurl.c; sourceTree = "<group>"; };
 		B16D12F33EC7B1CE7648515B6226F1D6 /* LFLiveVideoConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFLiveVideoConfiguration.h; sourceTree = "<group>"; };
 		B6902C81268147C5921DE887EC84A71D /* LFLiveSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFLiveSession.h; path = "LFLiveKit-ReplayKit/LFLiveSession.h"; sourceTree = "<group>"; };
 		B746D7FE98AE9DF138C69E0F978FFC8C /* LFVideoEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFVideoEncoder.h; sourceTree = "<group>"; };
-		BC3115CED6C4113DF544890F4F71586C /* libLFLiveKit-ReplayKit-iOS8.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libLFLiveKit-ReplayKit-iOS8.0.a"; path = "libLFLiveKit-ReplayKit-iOS8.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC3115CED6C4113DF544890F4F71586C /* libLFLiveKit-ReplayKit-iOS8.0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLFLiveKit-ReplayKit-iOS8.0.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC631789668FB469681E6B5017C498F /* LFNALUnit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFNALUnit.h; sourceTree = "<group>"; };
 		C1F38D8CD9250C5466806D600FA060BD /* LFLiveKit-ReplayKit-iOS11.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "LFLiveKit-ReplayKit-iOS11.0.xcconfig"; sourceTree = "<group>"; };
 		C29F38A8BE9BD5F1898ED89271ADA376 /* Pods-LFLiveKitDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LFLiveKitDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C6144208BE3EA7CA59FDEEC87452B78A /* LFMP4Atom.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFMP4Atom.h; sourceTree = "<group>"; };
 		C688547ACE65D48D9F28C179BF44DDC9 /* LFLiveKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LFLiveKit.h; path = "LFLiveKit-ReplayKit/LFLiveKit.h"; sourceTree = "<group>"; };
 		C81018D51B83EF73A44B1DCAB8F08CEA /* LFAudioEncoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFAudioEncoding.h; sourceTree = "<group>"; };
-		C9E26CB803A45D1A83B99E82A2E84E97 /* rtmp.c */ = {isa = PBXFileReference; includeInIndex = 1; path = rtmp.c; sourceTree = "<group>"; };
+		C9E26CB803A45D1A83B99E82A2E84E97 /* rtmp.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = rtmp.c; sourceTree = "<group>"; };
 		CC9596A3038CB1BB159C6CB84970DB3A /* LFAVEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFAVEncoder.h; sourceTree = "<group>"; };
 		CD6239648D8C14C4127CD13274AE8F92 /* Pods-Recoder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Recoder.debug.xcconfig"; sourceTree = "<group>"; };
 		D1C011642309D1C01DE69FE3B0B62D71 /* Pods-Recoder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Recoder-dummy.m"; sourceTree = "<group>"; };
-		D46C5D7705FC1DB7F7D5E804DAFF6B13 /* libPods-Recoder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Recoder.a"; path = "libPods-Recoder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D46C5D7705FC1DB7F7D5E804DAFF6B13 /* libPods-Recoder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Recoder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A93B973C3928A968190BA655A52434 /* LFFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LFFrame.m; sourceTree = "<group>"; };
 		DBCCAFFCC3C871D45381D24948FF7F94 /* LFLiveVideoConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LFLiveVideoConfiguration.m; sourceTree = "<group>"; };
-		E1D948AE4689B5E1216248EB6492A10B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E1D948AE4689B5E1216248EB6492A10B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E4FA79EE669795B24833A6C40453A31B /* dhgroups.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = dhgroups.h; sourceTree = "<group>"; };
 		E640F4F1184581FD1119316E9B77A7DB /* LFVideoEncoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFVideoEncoding.h; sourceTree = "<group>"; };
 		E95CDD1FA404606C70E65558D0003959 /* amf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = amf.h; sourceTree = "<group>"; };
 		EF52057C8AEFCC50E7060325614EB68C /* LFLiveAudioConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFLiveAudioConfiguration.h; sourceTree = "<group>"; };
-		EFFFE09F6AAFDB3154EF201590BF9613 /* libPods-LFLiveKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LFLiveKitDemo.a"; path = "libPods-LFLiveKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFFFE09F6AAFDB3154EF201590BF9613 /* libPods-LFLiveKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LFLiveKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09787F65E8B10646D084C90112AB800 /* LFStreamingBuffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LFStreamingBuffer.h; sourceTree = "<group>"; };
 		F8DFF2FA7A2FFEBBABFE4514178ABB6D /* LFHardwareVideoEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LFHardwareVideoEncoder.m; sourceTree = "<group>"; };
 		FB9BF532ACAB271A2917465424E6B728 /* rtmp_sys.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = rtmp_sys.h; sourceTree = "<group>"; };
@@ -298,7 +298,6 @@
 				B746D7FE98AE9DF138C69E0F978FFC8C /* LFVideoEncoder.h */,
 				334ECBEE34A9844ED1FBFDFF4A67E754 /* LFVideoEncoder.m */,
 			);
-			name = H264;
 			path = H264;
 			sourceTree = "<group>";
 		};
@@ -359,7 +358,6 @@
 				10275EB5D382EC86D78B303A5445A2D5 /* rtmp.h */,
 				FB9BF532ACAB271A2917465424E6B728 /* rtmp_sys.h */,
 			);
-			name = "pili-librtmp";
 			path = "pili-librtmp";
 			sourceTree = "<group>";
 		};
@@ -409,7 +407,7 @@
 				F09787F65E8B10646D084C90112AB800 /* LFStreamingBuffer.h */,
 				910D973D8B125CE924C7BB9AC54C2C57 /* LFStreamingBuffer.m */,
 				08AD64E04A8C0E6C857616BAA210D8BD /* LFStreamRTMPSocket.h */,
-				99131F2875F909F2DE20712B2362B6EE /* LFStreamRtmpSocket.m */,
+				99131F2875F909F2DE20712B2362B6EE /* LFStreamRTMPSocket.m */,
 				14E401535AA2955054ED15A50E3667E7 /* LFStreamSocket.h */,
 				1167705D059D85EF6B17C6BE2133A630 /* NSMutableArray+LFAdd.h */,
 				010D37B68692AAD4FDAAC2F6B9F0D5DC /* NSMutableArray+LFAdd.m */,
@@ -664,6 +662,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -702,7 +701,7 @@
 				BE0F82BFFD7A231E4E3D661B8A7161A2 /* LFMP4Atom.m in Sources */,
 				8533AE43D8A62EF9DEF9BB31A9B91881 /* LFNALUnit.cpp in Sources */,
 				266B8D03B7DFA6D9695D8D926842174C /* LFStreamingBuffer.m in Sources */,
-				D6D9F751E44B9F7012DEAC25425E81F5 /* LFStreamRtmpSocket.m in Sources */,
+				D6D9F751E44B9F7012DEAC25425E81F5 /* LFStreamRTMPSocket.m in Sources */,
 				DC3BC4B2D11155930AC5D32F156885B6 /* LFVideoEncoder.m in Sources */,
 				0DDBD1D84423FBD0CA6FF7781D173424 /* LFVideoFrame.m in Sources */,
 				B4ACF8BAF6744FB67394090F85C8DD62 /* log.c in Sources */,
@@ -750,7 +749,7 @@
 				4C4CDC3518D1EFDA7A0E9B2B4D8EE01C /* LFMP4Atom.m in Sources */,
 				3CB5248FDCE4F03E4550DDFCCCD7F6C6 /* LFNALUnit.cpp in Sources */,
 				712E79B085B248B2AEB89584D50E2FDC /* LFStreamingBuffer.m in Sources */,
-				0BF940E6D1ABF1168D0C50113C414E5C /* LFStreamRtmpSocket.m in Sources */,
+				0BF940E6D1ABF1168D0C50113C414E5C /* LFStreamRTMPSocket.m in Sources */,
 				44EB82444F453EEC35BF2D5FA9807208 /* LFVideoEncoder.m in Sources */,
 				50540961F8038817638C9950909AD74F /* LFVideoFrame.m in Sources */,
 				A824678D22B822B6D3CA19A2F9A7C295 /* log.c in Sources */,
@@ -946,7 +945,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1054,7 +1053,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;

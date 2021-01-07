@@ -149,6 +149,7 @@
     } else {
         configuration.videoSize = CGSizeMake(size.width, size.height);
     }
+    configuration.encoderType = LFVideoH264Encoder;
     return configuration;
     
 }
